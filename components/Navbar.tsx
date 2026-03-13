@@ -20,7 +20,7 @@ export default function Navbar() {
                 <div className="hidden md:flex items-center">
                     <a
                         href="tel:+917303060067"
-                        className="flex items-center gap-2 rounded-full bg-brand-burgundy/80 px-4 py-2 border border-white/30 text-white font-semibold hover:bg-brand-burgundy transition-colors"
+                        className="flex items-center gap-2 rounded-full bg-brand-muted-teal/80 px-4 py-2 border border-white/30 text-white font-semibold hover:bg-brand-muted-teal transition-colors"
                     >
                         <Phone className="w-6 h-6" />
                         <span>+91 7303060067</span>

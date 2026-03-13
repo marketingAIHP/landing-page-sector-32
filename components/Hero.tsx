@@ -48,7 +48,7 @@ export default function Hero() {
                             className="max-w-[12ch] text-4xl font-bold leading-[1.05] tracking-tight text-white sm:text-5xl lg:text-[58px]"
                             style={{ textShadow: "0 10px 25px rgba(0,0,0,0.45)" }}
                         >
-                            Office Space for Rent in <span className="text-brand-burgundy">Sector 32, Gurgaon</span>
+                            Office Space for Rent in <span className="text-brand-muted-teal">Sector 32, Gurgaon</span>
                         </h1>
                         <p
                             className="max-w-[36rem] text-base leading-relaxed text-white/90 sm:text-lg md:text-xl"
