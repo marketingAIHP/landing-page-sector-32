@@ -9,6 +9,7 @@ declare global {
         google?: GoogleMapsApi;
         __googleMapsLoader?: Promise<GoogleMapsApi>;
         __initGoogleMapsForAIHP?: () => void;
+        gm_authFailure?: () => void;
     }
 }
 
@@ -75,6 +76,8 @@ const sites = [
 ];
 
 const mapCenter = { lat: 28.4602, lng: 77.0538 };
+const fallbackMapSrc =
+    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14030.765662705058!2d77.0345672!3d28.4594965!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d19c0ddb5a5b5%3A0x6e2c38d6a782a6f!2sSector%2032%2C%20Gurugram%2C%20Haryana!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin";
 
 function hasUsableGoogleMapsKey(key: string | undefined): key is string {
     if (!key) return false;
@@ -193,11 +196,16 @@ export default function LocationBenefits() {
 
     useEffect(() => {
         let map: GoogleMapInstance | null = null;
+        const previousAuthFailureHandler = window.gm_authFailure;
 
         const mountMap = async () => {
             if (!mapRef.current) return;
 
             try {
+                window.gm_authFailure = () => {
+                    setMapError("Google Maps authentication failed.");
+                };
+
                 const googleApi = await loadGoogleMaps();
 
                 map = new googleApi.maps.Map(mapRef.current, {
@@ -229,6 +237,7 @@ export default function LocationBenefits() {
         return () => {
             overlaysRef.current.forEach((overlay) => overlay.setMap(null));
             overlaysRef.current = [];
+            window.gm_authFailure = previousAuthFailureHandler;
             map = null;
         };
     }, []);
@@ -267,7 +276,17 @@ export default function LocationBenefits() {
                     viewport={{ once: true }}
                     className="relative h-[340px] overflow-hidden rounded-2xl border-4 border-white bg-brand-modern-beige shadow-xl sm:h-[400px] lg:h-[450px]"
                 >
-                    <div ref={mapRef} className="h-full w-full" aria-label="AIHP Sector 32 map" />
+                    {mapError ? (
+                        <iframe
+                            src={fallbackMapSrc}
+                            title="AIHP Sector 32 map fallback"
+                            className="h-full w-full border-0"
+                            loading="lazy"
+                            referrerPolicy="no-referrer-when-downgrade"
+                        />
+                    ) : (
+                        <div ref={mapRef} className="h-full w-full" aria-label="AIHP Sector 32 map" />
+                    )}
 
                     <a
                         href="https://www.google.com/maps/search/?api=1&query=Sector+32+Gurugram+Haryana"
@@ -281,7 +300,7 @@ export default function LocationBenefits() {
 
                     {mapError ? (
                         <div className="absolute inset-x-4 bottom-4 z-10 rounded-2xl bg-white/95 px-4 py-3 text-sm text-brand-navy-grey shadow-lg">
-                            Add a valid <code>NEXT_PUBLIC_GOOGLE_MAPS_API_KEY</code> to render the interactive Google Map.
+                            Interactive Google Maps could not load. Showing a fallback map instead.
                         </div>
                     ) : null}
                 </motion.div>
