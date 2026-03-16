@@ -40,9 +40,9 @@ export default function MobileStickyCTA() {
                     onClick={() => {
                         window.scrollTo({ top: 0, behavior: "smooth" });
                     }}
-                    className="flex-1 h-14 bg-brand-burgundy text-white flex items-center justify-center gap-2 rounded-xl font-bold"
+                    className="flex-1 h-14 bg-brand-muted-teal text-white flex items-center justify-center gap-2 rounded-xl font-bold"
                 >
-                    Get Quote
+                    Book Visit
                     <ArrowRight className="w-5 h-5" />
                 </button>
             </div>
