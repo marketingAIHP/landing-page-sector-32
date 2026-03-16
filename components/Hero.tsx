@@ -35,7 +35,7 @@ export default function Hero() {
                 }}
             />
 
-            <div className="relative z-10 mx-auto grid w-full max-w-[1280px] grid-cols-1 items-center gap-8 sm:gap-10 lg:grid-cols-2 lg:gap-24 xl:gap-32">
+            <div className="relative z-10 mx-auto grid w-full max-w-[1280px] grid-cols-1 items-center gap-8 sm:gap-10 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.9fr)] lg:gap-16 xl:gap-20">
                 {/* Left Side: Content */}
                 <motion.div
                     initial={{ opacity: 0, x: -30 }}
@@ -43,37 +43,40 @@ export default function Hero() {
                     transition={{ duration: 0.8 }}
                     className="space-y-6 sm:space-y-8"
                 >
-                    <div className="space-y-4">
-                        <h1
-                            className="max-w-[12ch] text-4xl font-bold leading-[1.05] tracking-tight text-white sm:text-5xl lg:text-[58px]"
-                            style={{ textShadow: "0 10px 25px rgba(0,0,0,0.45)" }}
-                        >
-                            Office Space for Rent in <span className="text-brand-muted-teal">Sector 32, Gurgaon</span>
-                        </h1>
-                        <p
-                            className="max-w-[36rem] text-base leading-relaxed text-white/90 sm:text-lg md:text-xl"
-                            style={{ textShadow: "0 6px 18px rgba(0,0,0,0.35)" }}
-                        >
-                            AIHP delivers fully managed, brand-ready workspaces near NH8 & Medanta — move-in ready in 60 days, zero capital expenditure.
-                        </p>
-                    </div>
-
-                    {/* Trust Badges */}
-                    <div className="flex flex-wrap gap-2.5 sm:gap-3">
-                        {trustBadges.map((badge, index) => (
-                            <motion.div
-                                key={index}
-                                initial={{ opacity: 0, y: 20 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                transition={{ delay: 0.5 + index * 0.1 }}
-                                className="flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-3 py-2 backdrop-blur-md sm:px-4"
+                    <div className="max-w-[760px] rounded-[32px] border border-white/45 bg-white/78 p-7 shadow-[0_24px_80px_rgba(5,22,34,0.24)] backdrop-blur-md sm:p-10 lg:p-12">
+                        <div className="space-y-5">
+                            <h1
+                                className="max-w-[12ch] text-3xl font-bold leading-[1] tracking-[-0.03em] text-brand-burgundy sm:text-4xl lg:text-[54px]"
+                                style={{ fontFamily: 'Georgia, \"Times New Roman\", serif' }}
                             >
-                                <div className="p-1 bg-brand-burgundy rounded-full text-white">
-                                    <Check className="w-3 h-3" />
-                                </div>
-                                <span className="text-xs font-semibold text-white sm:text-sm">{badge}</span>
-                            </motion.div>
-                        ))}
+                                Office Space for Rent in <span className="text-brand-burgundy">Sector 32, Gurgaon</span>
+                            </h1>
+                            <p className="max-w-[33rem] text-base leading-[1.7] text-brand-navy-grey/90 sm:text-lg md:text-[20px]">
+                                AIHP delivers fully managed, brand-ready workspaces in Sector 32, Gurgaon, near NH8 and Medanta for excellent connectivity and visibility. Every office is tailored to your operational needs and brand requirements, with move-in readiness in 60 days and zero capital expenditure.
+                            </p>
+                        </div>
+
+                        {/* Trust Badges */}
+                        <div className="mt-8 flex flex-wrap gap-3 sm:gap-4">
+                            {trustBadges.map((badge, index) => (
+                                <motion.div
+                                    key={index}
+                                    initial={{ opacity: 0, y: 20 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    transition={{ delay: 0.5 + index * 0.1 }}
+                                    className={
+                                        index === 0
+                                            ? "flex items-center gap-2.5 rounded-full bg-brand-burgundy px-5 py-3 text-white shadow-[0_10px_25px_rgba(139,18,18,0.28)]"
+                                            : index === 1
+                                              ? "flex items-center gap-2.5 rounded-full bg-brand-muted-teal px-5 py-3 text-white shadow-[0_10px_25px_rgba(18,138,160,0.22)]"
+                                              : "flex items-center gap-2.5 rounded-full bg-brand-navy-ink px-5 py-3 text-white shadow-[0_10px_25px_rgba(5,22,34,0.24)]"
+                                    }
+                                >
+                                    <Check className="h-4 w-4" />
+                                    <span className="text-sm font-bold sm:text-base">{badge}</span>
+                                </motion.div>
+                            ))}
+                        </div>
                     </div>
                 </motion.div>
 
@@ -84,7 +87,11 @@ export default function Hero() {
                     transition={{ duration: 0.8, delay: 0.2 }}
                     className="flex w-full justify-center lg:ml-auto lg:justify-end"
                 >
-                    <HubSpotForm />
+                    <HubSpotForm
+                        className="max-w-[560px]"
+                        minHeightClassName="min-h-[520px] sm:min-h-[560px]"
+                        iframeHeight={560}
+                    />
                 </motion.div>
             </div>
         </section>

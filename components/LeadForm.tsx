@@ -58,7 +58,7 @@ export default function LeadForm() {
     return (
         <div className="bg-white p-8 rounded-2xl shadow-xl max-w-[460px] w-full space-y-6">
             <div className="space-y-2">
-                <h3 className="text-2xl font-bold text-brand-navy-ink">Get Your Custom Quote</h3>
+                <h3 className="text-2xl font-bold text-brand-burgundy">Get Your Custom Quote</h3>
                 <p className="text-sm text-brand-navy-grey">
                     Office space tailored to your needs. We&apos;ll call within 24 hours.
                 </p>

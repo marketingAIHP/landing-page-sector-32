@@ -7,7 +7,7 @@ export default function SecondaryCTA() {
             <div className="absolute -top-24 -right-24 w-96 h-96 bg-brand-burgundy/10 rounded-full blur-3xl" />
             <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-brand-muted-teal/10 rounded-full blur-3xl" />
 
-            <div className="relative z-10 mx-auto grid max-w-[1440px] grid-cols-1 items-center gap-10 sm:gap-12 lg:grid-cols-[minmax(0,1fr)_460px] lg:gap-40 xl:gap-56">
+            <div className="relative z-10 mx-auto grid max-w-[1440px] grid-cols-1 items-center gap-10 sm:gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(500px,620px)] lg:gap-24 xl:gap-32">
                 <div className="space-y-6 sm:space-y-8">
                     <div className="space-y-4">
                         <h2 className="text-3xl font-bold leading-tight text-white sm:text-4xl md:text-5xl">
@@ -30,8 +30,12 @@ export default function SecondaryCTA() {
                     </div>
                 </div>
 
-                <div className="mx-auto flex w-full max-w-md justify-center lg:mx-0 lg:justify-end">
-                    <HubSpotForm />
+                <div className="mx-auto flex w-full max-w-[620px] justify-center lg:mx-0 lg:justify-end">
+                    <HubSpotForm
+                        maxWidthClassName="max-w-[620px]"
+                        minHeightClassName="min-h-[500px] sm:min-h-[540px]"
+                        iframeHeight={540}
+                    />
                 </div>
             </div>
         </section>

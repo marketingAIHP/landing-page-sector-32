@@ -23,19 +23,31 @@ export default function Footer() {
 
                 {/* Contact Info */}
                 <div className="space-y-6">
-                    <h4 className="text-lg font-bold text-white uppercase tracking-wider">Contact Us</h4>
+                    <h4 className="text-lg font-bold uppercase tracking-[0.04em] text-white sm:text-xl">Contact Us</h4>
                     <ul className="space-y-4">
-                        <li className="flex items-center gap-3 text-white/60 hover:text-white transition-colors">
-                            <Phone className="w-5 h-5 text-brand-burgundy" />
-                            <span>+91 7861004918</span>
+                        <li>
+                            <a
+                                href="tel:+917303060067"
+                                className="group flex items-center gap-4 text-base text-white/70 transition-colors hover:text-white"
+                            >
+                                <Phone className="h-5 w-5 flex-shrink-0 text-brand-burgundy" />
+                                <span>+91 7303060067</span>
+                            </a>
                         </li>
-                        <li className="flex items-center gap-3 text-white/60 hover:text-white transition-colors">
-                            <Mail className="w-5 h-5 text-brand-burgundy" />
-                            <span>leasing@aihp.in</span>
+                        <li>
+                            <a
+                                href="mailto:leasing@aihp.in"
+                                className="group flex items-center gap-4 text-base text-white/70 transition-colors hover:text-white"
+                            >
+                                <Mail className="h-5 w-5 flex-shrink-0 text-brand-burgundy" />
+                                <span>leasing@aihp.in</span>
+                            </a>
                         </li>
-                        <li className="flex items-start gap-3 text-white/60 hover:text-white transition-colors">
-                            <MapPin className="w-5 h-5 text-brand-burgundy flex-shrink-0" />
-                            <span>AIHP Tower, 249 G, Udyog Vihar, Phase 4, Gurgaon 122015</span>
+                        <li className="group flex items-start gap-4 text-base text-white/70 transition-colors hover:text-white">
+                            <MapPin className="mt-1 h-5 w-5 flex-shrink-0 text-brand-burgundy" />
+                            <span className="max-w-sm leading-relaxed">
+                                AIHP Tower, 249 G, Udyog Vihar, Phase 4, Gurgaon 122015
+                            </span>
                         </li>
                     </ul>
                 </div>

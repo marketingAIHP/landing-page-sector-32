@@ -31,7 +31,7 @@ export default function MobileStickyCTA() {
             <div className="bg-white border-t border-slate-100 p-4 flex gap-4 shadow-[0_-8px_30px_rgb(0,0,0,0.12)]">
                 <a
                     href="tel:+917303060067"
-                    className="flex-1 h-14 bg-brand-muted-teal text-white flex items-center justify-center gap-2 rounded-xl font-bold"
+                    className="flex-1 h-14 bg-brand-burgundy text-white flex items-center justify-center gap-2 rounded-xl font-bold"
                 >
                     <Phone className="w-5 h-5" />
                     Call Now
