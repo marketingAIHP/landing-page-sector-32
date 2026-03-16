@@ -2,10 +2,10 @@ import Image from "next/image";
 
 export default function TrustedBy() {
     const clients = [
-        { name: "Indxx", image: "/Artboard-5.jpg" },
         { name: "Cordelia Cruises", image: "/Group-279.jpg" },
-        { name: "Advatix", image: "/Group-285.jpg" },
-        { name: "Sunkind Energy", image: "/Group-297.jpg" }
+        { name: "OLX", image: "/Group-274.jpg" },
+        { name: "Mahindra", image: "/Group-276.jpg" },
+        { name: "Advatix", image: "/Sites/Sector 32/AIHP Executive Centre/Brand/advatix-logo-header-1.png" }
     ];
 
     return (

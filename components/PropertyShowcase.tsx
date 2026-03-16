@@ -105,7 +105,7 @@ export default function PropertyShowcase() {
                 <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
                     <div className="space-y-4 max-w-2xl">
                         <h2 className="text-2xl font-bold uppercase tracking-tight leading-tight text-brand-navy-ink sm:text-3xl md:text-[3rem] md:whitespace-nowrap">
-                            Premium  Managed <span className="text-brand-burgundy">Offices in Sector 32</span>
+                            AIHP's Premium  Managed <span className="text-brand-burgundy">Offices in Sector 32</span>
                         </h2>
                         <p className="text-lg text-brand-navy-grey">
                             Explore our portfolio of institutional-grade office spaces. Designed for excellence, managed for growth.

@@ -13,14 +13,14 @@ const trustBadges = [
 
 export default function Hero() {
     return (
-        <section className="relative flex min-h-[760px] items-center justify-center overflow-hidden px-4 pb-10 pt-24 sm:px-6 sm:pb-12 sm:pt-28 md:min-h-screen md:px-8">
+        <section className="relative flex min-h-[680px] items-center justify-center overflow-hidden px-4 pb-10 pt-24 sm:min-h-[760px] sm:px-6 sm:pb-12 sm:pt-28 md:min-h-screen md:px-8">
             {/* Background Image without Overlay */}
             <div className="absolute inset-0 z-0">
                 <Image
                     src="/Atrium1.webp"
                     alt="AIHP Sector 32 Gurgaon"
                     fill
-                    className="object-cover"
+                    className="object-cover object-[62%_center] sm:object-center"
                     sizes="100vw"
                     priority
                 />
