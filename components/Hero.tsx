@@ -52,7 +52,7 @@ export default function Hero() {
                                 Office Space for Rent in <span className="text-brand-burgundy">Sector 32, Gurgaon</span>
                             </h1>
                             <p className="max-w-[33rem] text-base leading-[1.7] text-brand-navy-grey/90 sm:text-lg md:text-[20px]">
-                                AIHP delivers fully managed, brand-ready workspaces in Sector 32, Gurgaon, near NH8 and Medanta for excellent connectivity and visibility. Every office is tailored to your operational needs and brand requirements, with move-in readiness in 60 days and zero capital expenditure.
+                                AIHP delivers fully managed, brand-ready workspaces in Sector 32, Gurgaon. Every office is tailored to your operational needs and brand requirements, with move-in readiness in 60 days and zero capital expenditure.
                             </p>
                         </div>
 
