@@ -9,6 +9,7 @@ interface HubSpotFormProps {
   minHeightClassName?: string;
   iframeHeight?: number;
   maxWidthClassName?: string;
+  loading?: "eager" | "lazy";
 }
 
 const HubSpotForm: React.FC<HubSpotFormProps> = ({ 
@@ -18,6 +19,7 @@ const HubSpotForm: React.FC<HubSpotFormProps> = ({
   minHeightClassName = "min-h-[460px] sm:min-h-[500px]",
   iframeHeight = 500,
   maxWidthClassName = "max-w-[720px]",
+  loading = "lazy",
 }) => {
   return (
     <div className={`flex w-full ${maxWidthClassName} flex-col justify-center overflow-hidden rounded-[1.25rem] bg-white shadow-lg ${minHeightClassName} ${className}`.trim()}>
@@ -27,6 +29,8 @@ const HubSpotForm: React.FC<HubSpotFormProps> = ({
         height={`${iframeHeight}px`}
         className={`w-full border-0 ${minHeightClassName}`.trim()}
         title={title}
+        loading={loading}
+        referrerPolicy="strict-origin-when-cross-origin"
         style={{ minHeight: `${iframeHeight}px`, maxWidth: "100%", display: "block" }}
       />
     </div>

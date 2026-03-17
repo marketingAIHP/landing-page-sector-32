@@ -38,7 +38,7 @@ export default function MobileStickyCTA() {
                 </a>
                 <button
                     onClick={() => {
-                        window.scrollTo({ top: 0, behavior: "smooth" });
+                        document.getElementById("lead-form")?.scrollIntoView({ behavior: "smooth", block: "start" });
                     }}
                     className="flex-1 h-14 bg-brand-muted-teal text-white flex items-center justify-center gap-2 rounded-xl font-bold"
                 >

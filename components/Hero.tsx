@@ -23,6 +23,7 @@ export default function Hero() {
                     className="object-cover object-[62%_center] sm:object-center"
                     sizes="100vw"
                     priority
+                    quality={60}
                 />
             </div>
 
@@ -85,12 +86,14 @@ export default function Hero() {
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.2 }}
-                    className="flex w-full justify-center lg:ml-auto lg:justify-end"
+                    className="flex w-full justify-center scroll-mt-28 lg:ml-auto lg:justify-end"
+                    id="lead-form"
                 >
                     <HubSpotForm
                         className="max-w-[560px]"
                         minHeightClassName="min-h-[520px] sm:min-h-[560px]"
                         iframeHeight={560}
+                        loading="eager"
                     />
                 </motion.div>
             </div>

@@ -164,7 +164,8 @@ export default function PropertyShowcase() {
                                                 alt={property.name}
                                                 fill
                                                 className="object-cover group-hover:scale-105 transition-transform duration-700"
-                                                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                                                sizes="(max-width: 640px) 88vw, (max-width: 1024px) 50vw, 420px"
+                                                quality={60}
                                             />
                                         </div>
                                         <div className="p-7 flex-grow flex flex-col justify-between">

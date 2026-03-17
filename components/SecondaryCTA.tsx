@@ -1,4 +1,4 @@
-import HubSpotForm from "./HubSpotForm";
+import { ArrowRight, Phone } from "lucide-react";
 
 export default function SecondaryCTA() {
     return (
@@ -31,11 +31,36 @@ export default function SecondaryCTA() {
                 </div>
 
                 <div className="mx-auto flex w-full max-w-[620px] justify-center lg:mx-0 lg:justify-end">
-                    <HubSpotForm
-                        maxWidthClassName="max-w-[620px]"
-                        minHeightClassName="min-h-[500px] sm:min-h-[540px]"
-                        iframeHeight={540}
-                    />
+                    <div className="w-full rounded-[2rem] border border-white/10 bg-white/6 p-8 shadow-[0_24px_70px_rgba(0,0,0,0.25)] backdrop-blur-sm sm:p-10">
+                        <div className="space-y-5">
+                            <span className="inline-flex rounded-full border border-white/15 bg-white/10 px-4 py-2 text-xs font-bold uppercase tracking-[0.18em] text-white/80">
+                                Speak With Leasing
+                            </span>
+                            <h3 className="text-2xl font-bold leading-tight text-white sm:text-3xl">
+                                Get your proposal faster without loading another external form.
+                            </h3>
+                            <p className="text-base leading-relaxed text-white/75 sm:text-lg">
+                                Use the main enquiry form at the top of the page or call our team directly for immediate availability, pricing, and site visits.
+                            </p>
+                        </div>
+
+                        <div className="mt-8 grid gap-4 sm:grid-cols-2">
+                            <a
+                                href="#lead-form"
+                                className="inline-flex min-h-14 items-center justify-center gap-2 rounded-2xl bg-brand-burgundy px-6 py-4 text-center text-sm font-bold text-white transition-transform hover:-translate-y-0.5 sm:text-base"
+                            >
+                                Open Main Form
+                                <ArrowRight className="h-5 w-5" />
+                            </a>
+                            <a
+                                href="tel:+917303060067"
+                                className="inline-flex min-h-14 items-center justify-center gap-2 rounded-2xl border border-white/15 bg-white/10 px-6 py-4 text-center text-sm font-bold text-white transition-colors hover:bg-white/15 sm:text-base"
+                            >
+                                <Phone className="h-5 w-5" />
+                                Call Leasing Team
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
