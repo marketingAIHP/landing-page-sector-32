@@ -20,7 +20,7 @@ export default function SecondaryCTA() {
 
                     <div className="grid grid-cols-1 gap-4 pt-2 sm:grid-cols-2 sm:gap-6 sm:pt-4">
                         <div className="rounded-2xl border border-white/10 bg-white/5 p-5 sm:p-6">
-                            <span className="text-brand-burgundy font-black text-2xl">0%</span>
+                            <span className="text-brand-burgundy font-black text-2xl">0</span>
                             <p className="text-white/60 text-sm font-medium uppercase tracking-wider mt-1">Capital Expenditure</p>
                         </div>
                         <div className="rounded-2xl border border-white/10 bg-white/5 p-5 sm:p-6">
