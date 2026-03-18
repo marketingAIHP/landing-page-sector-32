@@ -17,9 +17,9 @@ export default function TrustedBy() {
                     </h2>
                     <p className="flex flex-wrap justify-center gap-3 text-sm font-medium uppercase tracking-[0.18em] text-brand-cool-grey sm:gap-4 sm:text-base md:text-lg">
                         {[
-                            "12 years",
+                            "15+ years",
                             "500+ clients",
-                            "5M sq ft",
+                            "10M+ sq. ft",
                         ].map((label) => (
                             <span
                                 key={label}

@@ -6,9 +6,9 @@ import { motion } from "framer-motion";
 import { Check } from "lucide-react";
 
 const trustBadges = [
-    "5M Sq Ft Delivered",
+    "10M+ Sq. Ft Delivered",
     "500+ Clients",
-    "12 Years Experience",
+    "15+ Years Experience",
 ];
 
 export default function Hero() {
@@ -45,20 +45,20 @@ export default function Hero() {
                     className="space-y-6 sm:space-y-8"
                 >
                     <div className="max-w-[760px] rounded-[32px] border border-white/45 bg-white/78 p-7 shadow-[0_24px_80px_rgba(5,22,34,0.24)] backdrop-blur-md sm:p-10 lg:p-12">
-                        <div className="space-y-5">
+                        <div className="space-y-5 text-center sm:text-left">
                             <h1
-                                className="max-w-[12ch] text-3xl font-bold leading-[1] tracking-[-0.03em] text-brand-burgundy sm:text-4xl lg:text-[54px]"
+                                className="mx-auto max-w-[10ch] text-3xl font-bold leading-[0.96] tracking-[-0.03em] text-balance text-brand-burgundy sm:mx-0 sm:max-w-[12ch] sm:text-4xl lg:text-[54px]"
                                 style={{ fontFamily: 'Georgia, \"Times New Roman\", serif' }}
                             >
                                 Office Space for Rent in <span className="text-brand-burgundy">Sector 32, Gurgaon</span>
                             </h1>
-                            <p className="max-w-[33rem] text-base leading-[1.7] text-brand-navy-grey/90 sm:text-lg md:text-[20px]">
+                            <p className="mx-auto max-w-[33rem] text-base leading-[1.7] text-brand-navy-grey/90 sm:mx-0 sm:text-lg md:text-[20px]">
                                 AIHP delivers fully managed, brand-ready workspaces in Sector 32, Gurgaon. Every office is tailored to your operational needs and brand requirements, with move-in readiness in 60 days and zero capital expenditure.
                             </p>
                         </div>
 
                         {/* Trust Badges */}
-                        <div className="mt-8 flex flex-wrap gap-3 sm:gap-4">
+                        <div className="mt-8 flex flex-wrap justify-center gap-3 sm:justify-start sm:gap-4">
                             {trustBadges.map((badge, index) => (
                                 <motion.div
                                     key={index}

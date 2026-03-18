@@ -3,8 +3,8 @@ import { Building2, Users2, Calendar, Layout } from "lucide-react";
 const stats = [
     {
         icon: Building2,
-        stat: "5M+",
-        label: "Sq Ft Delivered",
+        stat: "10M+",
+        label: "Sq. Ft Delivered",
     },
     {
         icon: Users2,
@@ -13,7 +13,7 @@ const stats = [
     },
     {
         icon: Calendar,
-        stat: "12",
+        stat: "15+",
         label: "Years Experience",
     },
     {
