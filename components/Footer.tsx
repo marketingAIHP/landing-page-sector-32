@@ -46,7 +46,7 @@ export default function Footer() {
                         <li className="group flex items-start gap-4 text-base text-white/70 transition-colors hover:text-white">
                             <MapPin className="mt-1 h-5 w-5 flex-shrink-0 text-brand-burgundy" />
                             <span className="max-w-sm leading-relaxed">
-                                AIHP Tower 3rd Floor, 249 G, Udyog Vihar, Phase 4, Gurgaon 122015
+                                AIHP Tower, 3rd Floor, 249 G, Udyog Vihar, Phase 4, Gurgaon 122015
                             </span>
                         </li>
                     </ul>
